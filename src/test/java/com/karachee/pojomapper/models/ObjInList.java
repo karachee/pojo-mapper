@@ -4,7 +4,7 @@ import com.karachee.pojomapper.annotations.FromListIndex;
 
 public class ObjInList {
 
-    @FromListIndex(index =3)
+    @FromListIndex(index = 3)
     private Integer inListValue;
 
     public Integer getInListValue() {

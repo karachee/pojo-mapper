@@ -11,7 +11,7 @@ public class TestObj {
     @FromMapKey(stringKey = "testKey")
     private String mapValue;
 
-    @FromListIndex(indices={4,5})
+    @FromListIndex(indices = {4, 5})
     private List<String> notes;
 
     @FromListIndex(index = 0)

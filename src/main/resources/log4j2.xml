@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="info" strict="true" name="XMLConfigTest" packages="com.karachee.pojomapper">
+
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{ISO8601} %-5p [%t] %logger{36} %m%n"/>
+        </Console>
+        <RandomAccessFile name="LocalLog" fileName="logs/pojoMapper.log" immediateFlush="true" append="true">
+            <PatternLayout>
+                <Pattern>%d{ISO8601} %-5p [%t] %logger{36} %m%n</Pattern>
+            </PatternLayout>
+        </RandomAccessFile>
+    </Appenders>
+
+    <Loggers>
+        <Root level="debug">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="LocalLog"/>
+        </Root>
+        <Logger name="com.karachee" level="info"/>
+        <Logger name="org.apache" level="warn"/>
+    </Loggers>
+</Configuration>
